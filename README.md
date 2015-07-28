@@ -61,9 +61,13 @@ The app should now be reachable under
 http://THE-IP-ADDRESS:777
 ```
 
+## Security
+
+Note that all this is **really insecure**. All is run as root user, no password protection or encryption is in place. It is only for illustration purposes. However, security features can easily be added to the set-up.
+
 ## datapark.io
 
-The easiest way to use Python, R, Julia, etc. in the cloud is to register under http://datapark.io.
+The easiest way to securely use Python, R, Julia, etc. in the cloud is to register under http://datapark.io.
 
 With a single registration you have a comprehensive set of **techonlogies, libraries and tools** available to do **data science in the browser**.
 
