@@ -36,7 +36,7 @@ bash setup_server.sh THE-IP-ADDRESS
 The setup might take a while. The last step in the setup fires up a **Jupyter Notebook** server on the **port 8888**. You can access it in the browser under
 
 ```
-THE-IP-ADDRESS:8888
+http://THE-IP-ADDRESS:8888
 ```
 
 You can now click on the example notebooks and play around.
@@ -58,7 +58,7 @@ python stock_interactive.py &
 The app should now be reachable under
 
 ```
-http://THE-IP-ADDRESS:777
+http://THE-IP-ADDRESS:7777
 ```
 
 ## Security
