@@ -13,19 +13,21 @@ apt-get autoremove
 wget -q http://repo.continuum.io/miniconda/Miniconda-latest-Linux-x86_64.sh -O Miniconda.sh
 bash Miniconda.sh -b
 rm Miniconda.sh
-export PATH="$HOME/miniconda/bin:$PATH"
+export PATH="$HOME/miniconda2/bin:$PATH"
 
 cat >> ~/.profile <<EOF
-export PATH="$HOME/miniconda/bin:$PATH"
+export PATH="$HOME/miniconda2/bin:$PATH"
 EOF
 
 # INSTALL PYTHON LIBRARIES --
 # ADD LIBRARIES YOU WANT TO USE
-conda install -y ipython-notebook
+conda install -y jupyter
 conda install -y matplotlib
 conda install -y pandas
 conda install -y seaborn
+conda install -y pandas-datareader
 
+pip install --upgrade pip
 pip install plotly
 pip install cufflinks
 pip install flask-wtf
@@ -39,4 +41,4 @@ rm ${HOME}/stock_int.zip
 cd ${HOME}/notebook
 
 # STARTING JUPYTER NOTEBOOK
-ipython notebook --ip=0.0.0.0 --no-browser --notebook-dir=$HOME/notebook
+jupyter notebook --ip=0.0.0.0 --no-browser --notebook-dir=$HOME/notebook
