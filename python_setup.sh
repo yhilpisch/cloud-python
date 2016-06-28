@@ -26,13 +26,17 @@ conda install -y matplotlib
 conda install -y pandas
 conda install -y seaborn
 conda install -y pandas-datareader
+conda install -y pytables
+conda install -y scikit-learn
 
 pip install --upgrade pip
 pip install plotly
 pip install cufflinks
 pip install flask-wtf
 
-# COPYING FILES TO WORKING DIRECTORY
+# COPYING FILES
+mkdir ${HOME}/.jupyter
+mv ${HOME}/jupyter_notebook_config.py ${HOME}/.jupyter/
 mkdir ${HOME}/notebook
 mv ${HOME}/*.ipynb ${HOME}/notebook
 rm ${HOME}/*.ipynb
@@ -41,4 +45,4 @@ rm ${HOME}/stock_int.zip
 cd ${HOME}/notebook
 
 # STARTING JUPYTER NOTEBOOK
-jupyter notebook --ip=0.0.0.0 --no-browser --notebook-dir=$HOME/notebook
+jupyter notebook --notebook-dir=$HOME/notebook
